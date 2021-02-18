@@ -27,6 +27,7 @@ void solve(int arr[], int k, vector<int>& res, int n){
             dq.push_back(i);
         }
     }
+    //adding the remaining elements of the queue into res
     if(!dq.empty()){
         res.push_back(arr[dq.front()]);
     }else

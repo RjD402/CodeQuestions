@@ -5,6 +5,7 @@ using namespace std;
 int subarraySum(int arr[], int n){
     int sum =INT_MIN, maxi=INT_MIN;
 
+    //running two loops the TC is O(n*n)
     for(int i=0;i<n;i++){
         sum=0;
         for(int j=i;j<n;j++){
