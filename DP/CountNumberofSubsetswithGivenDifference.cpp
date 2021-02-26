@@ -32,6 +32,11 @@ int main(){
     for(auto x: arr)
         sum+=x;
     
+    //since s1+s2 = sum
+    //s1-s2 = diff
+    //2s1 = sum+diff
+    //thus (target) s1 = (sum+diff)/2;
+    
     int target = (diff+sum)/2;
 
     //now we just need to find the number of subarrays having sum equal to target. Similar to count subset sum problem
