@@ -1,0 +1,10 @@
+height of a balanced binary seach tree = log2n
+where n = number of nodes in the binary tree
+
+Three type of traversal in a binary search tree are
+a. Inorder traversal (Left, Node, Right)
+b. Preorder traversal (Node, Left, Right)
+c. Post order traversal (Left, Right, Node)
+
+
+The Inorder traversal of a binary search tree is a sorted array of numbers
