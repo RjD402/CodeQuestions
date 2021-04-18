@@ -6,7 +6,7 @@ using namespace std;
 int binomialCoeff(int n, int k)
 {
 
-    vector<vector<int>> res;
+    vector< vector<int> >res;
     vector<int> temp(k+1,0);
 	int C[k + 1];
 	memset(C, 0, sizeof(C));
@@ -19,17 +19,21 @@ int binomialCoeff(int n, int k)
 	C[0] = 1; // nC0 is 1
     temp[0] = 1;
 
+    
+
 	for (int i = 1; i <= n; i++) {
 		// Compute next row of pascal triangle using
 		// the previous row
         //we are going from min(i, k) till 0
+        temp.resize(i+1);
 		for (int j = min(i, k); j > 0; j--)
 			{
                 C[j] = C[j] + C[j - 1];
                 temp[j] = temp[j-1]+temp[j];
             }
+            res.push_back(temp);
 	}
-	return C[k];
+	
     res.push_back(temp);
 
     for(auto& row: res){
@@ -38,6 +42,9 @@ int binomialCoeff(int n, int k)
         }
         cout<<endl;
     }
+
+    return C[k];    
+
 }
 
 /* Driver code*/
